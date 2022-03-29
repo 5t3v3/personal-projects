@@ -25,7 +25,3 @@ cat subdomain.txt | httprobe > httprobe.txt
 echo "screenshots for active domains"
 python3 /root/tools/EyeWitness/EyeWitness.py --no-prompt  -f httprobe.txt --web --timeout 14 -d eye
 
-#Subdomain takeover
-
-cat subdomain.txt | xargs -n 1 -I{} host -t CNAME {}  >cname.txt
-
